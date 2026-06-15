@@ -1,13 +1,13 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "ap-south-1"
 }
 
 resource "aws_instance" "one" {
   count                  = 4
-  ami                    = "ami-0ecb62995f68bb549"
+  ami                    = "ami-01a00762f46d584a1"
   instance_type          = "c7i-flex.large"
-  key_name               = "rahamdocker"
-  vpc_security_group_ids = ["sg-0ddd6bb55cfb8039c"]
+  key_name               = "mumbai"
+  vpc_security_group_ids = ["sg-0b669fbe4dbdca725"]
   tags = {
     Name = var.instance_names[count.index]
   }
